@@ -2,12 +2,26 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // test your functions here to make sure they work
+    double SomeDist = distFormula(0, 5, 0, 0);
+    System.out.println(SomeDist);
   }
 
-  // Implement distance formula method here
+  public static double distFormula(double x1, double y1, double x2, double y2)
+  {
+    double dist = Math.sqrt((x1 - x2)*(x1-x2) + (y1 - y2)*(y1 - y2));
+    return dist;
+  }
 
-  // implement one of your quadratic formula methods here
+  public static double quadFormulaPositive(double a, double b, double c)
+  {
+    double D = Math.sqrt(b*b - 4*a*c);
+    return(-b + D) / (2*a);
+  }
 
-  // implement the other quadratic formula here
+  public static double quadFormulaNegative(double a, double b, double c)
+  {
+    double X = Math.sqrt(b*b - 4*a*c);
+    return(-b - X) / (2*a);
+  }
 }
+
